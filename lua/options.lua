@@ -28,5 +28,3 @@ opt.winblend = 10
 
 -- Wildmode
 opt.wildmode = "longest:full,full"
-
-
