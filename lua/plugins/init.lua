@@ -1,4 +1,11 @@
 return {
+
+  -- disable default plugins
+  {
+    "nvim-tree/nvim-tree.lua",
+    enabled = false,
+  },
+
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
@@ -38,6 +45,22 @@ return {
         "tsx",
         "python",
       },
+    },
+  },
+
+  {
+    "NvChad/nvcommunity",
+    { import = "nvcommunity.file-explorer.oil-nvim" },
+    { import = "nvcommunity.tools.telescope-fzf-native" },
+    {
+      "oil.nvim",
+      lazy = false,
+      keys = {
+        { "-", "<CMD>Oil<CR>", desc = "Open explorer" },
+      },
+      opts = function()
+        return require "configs.oil-nvim"
+      end,
     },
   },
 }
