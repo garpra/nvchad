@@ -12,7 +12,6 @@ return {
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -20,7 +19,6 @@ return {
     end,
   },
 
-  -- test new blink
   { import = "nvchad.blink.lazyspec" },
 
   {
